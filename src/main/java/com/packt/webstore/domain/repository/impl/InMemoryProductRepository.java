@@ -58,6 +58,18 @@ public class InMemoryProductRepository implements ProductRepository{
 	  return productsByCategory;
 	}
   
+  public List<Product> getProductsByManufacturer(String manufacturer) {
+	  List<Product> productsByManufacturer = new ArrayList<Product>();
+	    
+	  for(Product product: listOfProducts) {
+	    if(manufacturer.equalsIgnoreCase(product.getManufacturer())){
+	      productsByManufacturer.add(product);
+	    }
+	  }
+	  
+	  return productsByManufacturer;
+	}
+  
   public Product getProductById(String productId) {
 	    Product productById = null;
 	    
@@ -101,4 +113,6 @@ public class InMemoryProductRepository implements ProductRepository{
 	    
 	    return productsByCategory;
 	}
+  
+  
 }

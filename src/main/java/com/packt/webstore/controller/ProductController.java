@@ -55,6 +55,13 @@ public class ProductController {
     return "product";
   }
   
+  
+	/*  
+	 * http://localhost:8080/webstore/products/tablet/price;low=200;high=400?manufacturer="Google"
+		
+	 * 
+	 * Remember that this URL contains the matrix variables low and high to represent the price range, the GET parameter manufacturer to identify 
+	  the manufacturer, and finally, a URI template path variable tablet to represent the category. */
  
   
 }
